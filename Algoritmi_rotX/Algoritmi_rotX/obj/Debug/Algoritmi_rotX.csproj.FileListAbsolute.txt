@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\obj\Debug\Algoritmi_rotX.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\obj\Debug\Algoritmi_rotX.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\bin\Debug\Algoritmi_rotX.exe.config
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\bin\Debug\Algoritmi_rotX.exe
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\bin\Debug\Algoritmi_rotX.pdb
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\obj\Debug\Algoritmi_rotX.exe
+C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\Algoritmi_rotX\Algoritmi_rotX\obj\Debug\Algoritmi_rotX.pdb
