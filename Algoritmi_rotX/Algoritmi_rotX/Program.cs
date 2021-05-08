@@ -25,6 +25,7 @@ namespace Algoritmi_rotX
             key = Convert.ToInt32(Console.ReadLine());  // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
 
             Console.WriteLine();
+            string pergjigjja = "";
 
             StringBuilder encrypted = new StringBuilder(); // plaintexti i enkriptuar
 
@@ -36,6 +37,19 @@ namespace Algoritmi_rotX
                 Console.WriteLine("Plaintexti i enkriptuar eshte: " + encrypted);
                 // Console.WriteLine(encrypted);
                 Console.WriteLine();
+                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
+                Console.WriteLine();
+                pergjigjja = Console.ReadLine().ToLower();
+                if (pergjigjja.Equals("jo"))
+                {
+                    break;
+                }
+                else
+                {
+                    decrypted = Decrypt(key, encrypted.ToString());
+                }
+                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
+                break;
             }
         }
         public static StringBuilder Encrypt(int key, string plaintext)
