@@ -21,7 +21,7 @@ namespace rotX_Windows
         {
             int key = Convert.ToInt32(textBox4.Text);
             string plaintext = textBox1.Text;
-            textBox2.Text = rotX.Encrypt(key, plaintext);
+            textBox2.Text = rotX.Encrypt(key, encrypted.ToString());
 
         }
         private void button2_Click(object sender, EventArgs e)
@@ -30,12 +30,21 @@ namespace rotX_Windows
             string ciphertext = textBox2.Text;
             textBox1.Text = rotX.Decrypt(key, ciphertext);
         }
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -52,13 +61,17 @@ namespace rotX_Windows
         }
 
         private static char[] alfabeti = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+      
+
+        
+         
 
         public class rotX
         {
-            public static string Encrypt(int key, string plaintext)
+            public static StringBuilder Encrypt(int key, string plaintext)
             {
 
-                string encryption = " ";
+                StringBuilder encryption = new StringBuilder();
                 char[] plaintextArray = plaintext.ToCharArray(); //ne kete vektor i kemi ru te gjitha karakteret e plaintextit
                 char keyedLetter = ' '; //ruhet shkronja pas shiftimit
 
@@ -90,13 +103,13 @@ namespace rotX_Windows
 
                 }
 
-                return encryption;
+                return encryption.ToString();
             }
 
-            public static string Decrypt(int key, string ciphertext)
+            public static StringBuilder Decrypt(int key, string ciphertext)
             {
 
-                string decryption =" ";
+                 StringBuilder decryption = new StringBuilder();
                 char[] ciphertextArray = ciphertext.ToCharArray();  // ne kete vektor i ruajme karakteret e ciphertextit
                 char keyedLetter = ' ';// ruhet shkronja gjate shiftimit
                 int letter = 0; // shkronja e re qe fitohet
@@ -135,7 +148,7 @@ namespace rotX_Windows
 
                 }
 
-                return decryption;
+                return decryption.ToString();
             }
 
            
