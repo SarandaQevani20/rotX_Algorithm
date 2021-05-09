@@ -26,7 +26,7 @@ namespace Algoritmi_rotX
             key = Convert.ToInt32(Console.ReadLine());  // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
 
             Console.WriteLine();
-            string pergjigjja = "";
+            
 
             StringBuilder encrypted = new StringBuilder(); // plaintexti i enkriptuar
             StringBuilder decrypted = new StringBuilder(); // ciphertexti i dekriptuar
