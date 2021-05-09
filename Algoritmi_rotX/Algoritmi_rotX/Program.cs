@@ -14,6 +14,7 @@ namespace Algoritmi_rotX
         static void Main(string[] args)
         {
             string plaintext; //ne kete variabel e ruajme plaintextin qe e shenon perdoruesi
+            string pergjigjja = ""; //ne kete variables e ruajme pergjigjen se a deshiron perdoruesi me dekriptu ciphertextin e fituar
             //I kerkojme perdoruesit me shenu plaintextin
             Console.WriteLine("Sheno plaintextin:");
             plaintext = Console.ReadLine();
@@ -27,6 +28,7 @@ namespace Algoritmi_rotX
             Console.WriteLine();
 
             StringBuilder encrypted = new StringBuilder(); // plaintexti i enkriptuar
+            StringBuilder decrypted = new StringBuilder(); // ciphertexti i dekriptuar
 
             while (true)
             {
@@ -36,6 +38,21 @@ namespace Algoritmi_rotX
                 Console.WriteLine("Plaintexti i enkriptuar eshte: " + encrypted);
                 // Console.WriteLine(encrypted);
                 Console.WriteLine();
+                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp yes ose no ");
+                pergjigjja = Console.ReadLine().ToLower();
+
+                if (pergjigjja.Equals("yes"))
+                {
+                    decrypted = Decrypt(key, encrypted.ToString());
+                }
+                else
+                {
+                    break;
+                }
+                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
+                // Console.Write(decrypted);
+
+               
             }
         }
         public static StringBuilder Encrypt(int key, string plaintext)
@@ -75,5 +92,50 @@ namespace Algoritmi_rotX
 
             return encryption;
         }
+   
+    public static StringBuilder Decrypt(int key, string plaintext)
+    {
+
+        StringBuilder decryption = new StringBuilder();
+        char[] ciphertextArray = plaintext.ToCharArray();  // ne kete vektor i ruajme karakteret e ciphertextit
+        char keyedLetter = ' ';// ruhet shkronja gjate shiftimit
+        int letter = 0; // shkronja e re qe fitohet
+
+        for (int i = 0; i < ciphertextArray.Length; i++)
+        {
+
+
+            if (ciphertextArray[i].Equals(' '))
+            {
+                decryption.Append(ciphertextArray[i]);
+                Console.WriteLine(decryption);
+                continue;
+            }
+
+            for (int j = 0; j < alfabeti.Length; j++)
+            {
+
+                if (ciphertextArray[i].Equals(alfabeti[j]))
+                {
+                    letter = (j - key) % 26;
+
+                    // perserisa moduli i nje numri negativ eshte nje numer negativ
+                    // shtimi i 26 në numrin negativ ka të njëjtin rezultat si te fitohej numer pozitiv
+                    if (letter < 0)
+                    {
+                        letter += 26;
+                    }
+
+                    keyedLetter = alfabeti[letter];
+                    decryption.Append(keyedLetter);
+
+                }
+
+            }
+
+        }
+
+        return decryption;
     }
+  }
 }
