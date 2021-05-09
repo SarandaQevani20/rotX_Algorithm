@@ -23,3 +23,19 @@ C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\rotX_Windows\rotX_Windows\ob
 C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.dll
 C:\Users\Admin\Desktop\Data_Security\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.pdb
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.Form1.resources
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.Properties.Resources.resources
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.AssemblyInfo.cs
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.dll
+C:\Users\HP\Desktop\Projekti Siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.pdb
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.exe
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.deps.json
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.runtimeconfig.json
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.runtimeconfig.dev.json
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.dll
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.pdb
+C:\Users\HP\Desktop\Projekti siguri\rotX_Algorithm\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.genruntimeconfig.cache
