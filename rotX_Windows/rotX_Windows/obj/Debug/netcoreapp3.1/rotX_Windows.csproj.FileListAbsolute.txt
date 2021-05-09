@@ -1,0 +1,16 @@
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.exe
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.deps.json
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.runtimeconfig.json
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.dll
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\bin\Debug\netcoreapp3.1\rotX_Windows.pdb
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.Form1.resources
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.Properties.Resources.resources
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.dll
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.pdb
+C:\Users\Admin\Desktop\Ide\rotX_Windows\rotX_Windows\obj\Debug\netcoreapp3.1\rotX_Windows.genruntimeconfig.cache
