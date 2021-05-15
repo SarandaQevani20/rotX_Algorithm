@@ -56,4 +56,49 @@ Metoda Decryption:
 
 Dekodimi është procesi i kundërt - shndërrimi i një formati të koduar përsëri në sekuencën origjinale të karaktereve.Ne kete rast dekodon vargun nga shifrat në shkronjat përkatëse.Metoda e kthen pergjigjien e dekriptuar e cila thirret ne main.
 
+# form1.cs
+
+Kjo paraqet pjesen e dytë të projektit.Faktikisht pjesa e form është pjesa e desktop app e cila ke qenë e kërkuar te krijohet në kuadër te projeki.
+
+
+◦Përshkrim rreth përmbajtjes dhe funksionit:
+
+Kjo pjese e e programit paraqet ekzekutimin e kodit ne desktop.
+
+# public partial class Form1 : Form
+
+Duke përdorur klasën e pjesshme mundësohet që të definohet e njëjta klasë në dy source fajlla të ndryshëm që i përkasin së njëjtës namespace.Këto konsiderohen si të njëjta gjatë kompajlimit.Form1 është emri i Formës dhe ":" përdoret për të trashëguar vetitë e klasës bazë. Këtu Form përfaqëson System.Windows.Forms.Form. Trashëgimia përdoret për të hyrë në vetitë dhe metodat e klasës bazë.
+
+Brenda Form1 gjenden:
+1.textBox1_TextChanged()
+2.textBox2_TextChanged()
+3.textBox3_TextChanged()
+4.textBox4_TextChanged()
+
+◦ button1_Click(object sender, EventArgs e)
+  Funksionon në këtë mënyrë:
+      ◦ Celësi  konvertohet në integer
+      ◦ Plaintexti në textbox-in e parë 
+      ◦ Përmes celësit bëhet enkriptimi i plaintext-it
+
+◦ button2_Click(object sender, EventArgs e)
+  Funksionon në këtë mënyrë :
+      ◦ Celësi  konvertohet në integer
+      ◦ Ciphertext-i në textboxin e dytë
+      ◦ Përmes celësit bëhet dekriptimi i ciphertext-it
+
+◦ button3_Click(object sender, EventArgs e)
+  Ne momentin që klikohet ne kete buton:
+      ◦ Fshihet përmbajtja e textBox1
+      ◦ Fshihet përmbajtja e textBox2
+      ◦ Fshihet përmbajtja e textBox3
+
+◦ button4_Click(object sender, EventArgs e)
+  Pse është përdorur?
+       ◦ Kur na duhet të dalim ose të mbyllim formën e hapur atëherë duhet të përdorim metodën "this.Close ()" për të mbyllur formularin në me rastin e klikimit të butonit.
+
+
+
+
+
 
