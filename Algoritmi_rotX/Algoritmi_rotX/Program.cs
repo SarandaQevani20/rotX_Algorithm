@@ -43,6 +43,7 @@ namespace Algoritmi_rotX
                 Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
                 pergjigjja = Console.ReadLine().ToLower();
 
+                
                 if (pergjigjja.Equals("po"))
                 {
                     decrypted = Decrypt(key, encrypted.ToString());
@@ -72,6 +73,7 @@ namespace Algoritmi_rotX
                 //kontrollojme nese brenda plaintextit ka hapesira,nese po ato hapesira i percillen edhe ciphertextit
                 if (plaintextArray[i].Equals(' '))
                 {
+                    
                     encryption.Append(plaintextArray[i]);
                     continue;
                 }
