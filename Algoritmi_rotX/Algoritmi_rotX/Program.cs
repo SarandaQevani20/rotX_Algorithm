@@ -40,6 +40,7 @@ namespace rotX
                 Console.WriteLine("Teksti i enkriptuar eshte: " + encrypted);
                 
                 Console.WriteLine();
+<<<<<<< HEAD
                 Console.Write("A deshironi ta dekriptoni tekstin? Shtyp po ose jo! ");
                 pergjigjja = Console.ReadLine().ToLower();
                 Console.WriteLine();
@@ -55,7 +56,26 @@ namespace rotX
 
                 Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
                 break;
+=======
+
+                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
+                pergjigjja = Console.ReadLine().ToLower();
+
+                
+                if (pergjigjja.Equals("po"))
+                {
+                    decrypted = Decrypt(key, encrypted.ToString());
+                }
+                else
+                {
+                    break;
+                }
+                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
+                // Console.Write(decrypted);
+
+>>>>>>> 0d5a5e96039eda7c39777fb122aadf99bcda6926
             }
+
         }
 
 
@@ -68,12 +88,15 @@ namespace rotX
             char[] plaintextArray = plaintext.ToCharArray(); //ne kete vektor i kemi ru te gjitha karakteret e plaintextit
             char keyedLetter = ' ';   //ruhet shkronja pas shiftimit
 
+            plaintext.ToUpper();
+
             for (int i = 0; i < plaintextArray.Length; i++) // iterojme pergjate vektorit
             {
 
                 //kontrollojme nese brenda plaintextit ka hapesira,nese po ato hapesira i percillen edhe ciphertextit
                 if (plaintextArray[i].Equals(' '))
                 {
+                    
                     encryption.Append(plaintextArray[i]);
                     continue;
                 }
