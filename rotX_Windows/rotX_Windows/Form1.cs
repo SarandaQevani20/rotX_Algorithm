@@ -35,14 +35,14 @@ namespace rotX_Windows
         private void button1_Click(object sender, EventArgs e)
         {
             int key = Convert.ToInt32(textBox4.Text);
-            string plaintext = textBox1.Text;
+            string plaintext = textBox1.Text.ToLower();
             textBox2.Text = rotX.Encrypt(key, plaintext);
 
         }
         private void button2_Click(object sender, EventArgs e)
         {
             int key = Convert.ToInt32(textBox4.Text);
-            string ciphertext = textBox2.Text;
+            string ciphertext = textBox2.Text.ToLower();
             textBox1.Text = rotX.Decrypt(key, ciphertext);
         }
 
