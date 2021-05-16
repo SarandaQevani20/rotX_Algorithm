@@ -4,60 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algoritmi_rotX
+namespace rotX
 {
     class Program
     {
 
-        private static char[] alfabeti = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-        static int key; // ne kete variables e ruajme celesin
+        private static char[] alfabeti = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 
+        'z' };
+        static int key;  // ne kete variables e ruajme celesin
         static void Main(string[] args)
         {
-            string plaintext; //ne kete variabel e ruajme plaintextin qe e shenon perdoruesi
-            string pergjigjja = ""; //ne kete variables e ruajme pergjigjen se a deshiron perdoruesi me dekriptu ciphertextin e fituar
-            //I kerkojme perdoruesit me shenu plaintextin
-            Console.WriteLine("Sheno plaintextin:");
-            plaintext = Console.ReadLine();
+            string plaintext;            //ne kete variabel e ruajme plaintextin qe e shenon perdoruesi
+            string pergjigjja = "";     //ne kete variables e ruajme pergjigjen se a deshiron perdoruesi me dekriptu ciphertextin e fituar
 
+
+           //I kerkojme perdoruesit me shenu plaintextin
+            Console.WriteLine("Sheno plaintextin:");
+            plaintext = Console.ReadLine().ToLower();
             Console.WriteLine();
 
             //I kerkojme perdoruesit me shenu celesin
-            Console.WriteLine("Shenoni celsin:");
-            key = Convert.ToInt32(Console.ReadLine());  // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
-
+            Console.WriteLine("Sheno celsin:");
+            key = Convert.ToInt32(Console.ReadLine()); // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
             Console.WriteLine();
-            
 
             StringBuilder encrypted = new StringBuilder(); // plaintexti i enkriptuar
             StringBuilder decrypted = new StringBuilder(); // ciphertexti i dekriptuar
+
 
             while (true)
             {
 
                 encrypted = Encrypt(key, plaintext);
 
-                Console.WriteLine("Plaintexti i enkriptuar eshte: " + encrypted);
-                // Console.WriteLine(encrypted);
+                Console.WriteLine("Teksti i enkriptuar eshte: " + encrypted);
+                
                 Console.WriteLine();
-
-                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp yes ose no ");
+                Console.Write("A deshironi ta dekriptoni tekstin? Shtyp po ose jo! ");
                 pergjigjja = Console.ReadLine().ToLower();
-
-                if (pergjigjja.Equals("yes"))
-                {
-                    decrypted = Decrypt(key, encrypted.ToString());
-                }
-                else
-                {
-                    break;
-                }
-                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
-                // Console.Write(decrypted);
-
-               
-                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
                 Console.WriteLine();
-                pergjigjja = Console.ReadLine().ToLower();
                 if (pergjigjja.Equals("jo"))
                 {
                     break;
@@ -65,17 +50,23 @@ namespace Algoritmi_rotX
                 else
                 {
                     decrypted = Decrypt(key, encrypted.ToString());
+                    
                 }
+
                 Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
                 break;
             }
         }
+
+
+        //funksioni qe e enkripton plaintextin,celesi paraqet shiftimin ndersa plaintext mesazhin qe e shkruan perdoruesi public static StringBuilder Encrypt(int key, string plaintext)
+
         public static StringBuilder Encrypt(int key, string plaintext)
         {
 
             StringBuilder encryption = new StringBuilder(); //plaintexti i enkriptuar
             char[] plaintextArray = plaintext.ToCharArray(); //ne kete vektor i kemi ru te gjitha karakteret e plaintextit
-            char keyedLetter = ' '; //ruhet shkronja pas shiftimit
+            char keyedLetter = ' ';   //ruhet shkronja pas shiftimit
 
             for (int i = 0; i < plaintextArray.Length; i++) // iterojme pergjate vektorit
             {
@@ -107,50 +98,50 @@ namespace Algoritmi_rotX
 
             return encryption;
         }
-   
-    public static StringBuilder Decrypt(int key, string plaintext)
-    {
 
-        StringBuilder decryption = new StringBuilder();
-        char[] ciphertextArray = plaintext.ToCharArray();  // ne kete vektor i ruajme karakteret e ciphertextit
-        char keyedLetter = ' ';// ruhet shkronja gjate shiftimit
-        int letter = 0; // shkronja e re qe fitohet
-
-        for (int i = 0; i < ciphertextArray.Length; i++)
+        public static StringBuilder Decrypt(int key, string plaintext)
         {
 
+            StringBuilder decryption = new StringBuilder();
+            char[] ciphertextArray = plaintext.ToCharArray();  // ne kete vektor i ruajme karakteret e ciphertextit
+            char keyedLetter = ' ';  // ruhet shkronja gjate shiftimit
+            int letter = 0; // shkronja e re qe fitohet
 
-            if (ciphertextArray[i].Equals(' '))
-            {
-                decryption.Append(ciphertextArray[i]);
-                Console.WriteLine(decryption);
-                continue;
-            }
-
-            for (int j = 0; j < alfabeti.Length; j++)
+            for (int i = 0; i < ciphertextArray.Length; i++)
             {
 
-                if (ciphertextArray[i].Equals(alfabeti[j]))
+
+                if (ciphertextArray[i].Equals(' '))
                 {
-                    letter = (j - key) % 26;
+                    decryption.Append(ciphertextArray[i]);
+                    continue;
+                }
 
-                    // perderisa moduli i nje numri negativ eshte nje numer negativ
-                    // shtimi i 26 në numrin negativ ka të njëjtin rezultat si te fitohej numer pozitiv
-                    if (letter < 0)
+                for (int j = 0; j < alfabeti.Length; j++)
+                {
+
+                    if (ciphertextArray[i].Equals(alfabeti[j]))
                     {
-                        letter += 26;
-                    }
+                        letter = (j - key) % 26;
 
-                    keyedLetter = alfabeti[letter];
-                    decryption.Append(keyedLetter);
+
+                        // perderisa moduli i nje numri negativ eshte nje numer negativ
+                        // shtimi i 26 në numrin negativ ka të njëjtin rezultat si te fitohej numer pozitiv
+                        if (letter < 0)
+                        {
+                            letter += 26;
+                        }
+
+                        keyedLetter = alfabeti[letter];
+                        decryption.Append(keyedLetter);
+
+                    }
 
                 }
 
             }
 
+            return decryption;
         }
-
-        return decryption;
     }
-  }
 }
