@@ -40,10 +40,10 @@ namespace Algoritmi_rotX
                 // Console.WriteLine(encrypted);
                 Console.WriteLine();
 
-                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp yes ose no ");
+                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
                 pergjigjja = Console.ReadLine().ToLower();
 
-                if (pergjigjja.Equals("yes"))
+                if (pergjigjja.Equals("po"))
                 {
                     decrypted = Decrypt(key, encrypted.ToString());
                 }
@@ -54,21 +54,8 @@ namespace Algoritmi_rotX
                 Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
                 // Console.Write(decrypted);
 
-               
-                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
-                Console.WriteLine();
-                pergjigjja = Console.ReadLine().ToLower();
-                if (pergjigjja.Equals("jo"))
-                {
-                    break;
-                }
-                else
-                {
-                    decrypted = Decrypt(key, encrypted.ToString());
-                }
-                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
-                break;
             }
+
         }
         public static StringBuilder Encrypt(int key, string plaintext)
         {
@@ -76,6 +63,8 @@ namespace Algoritmi_rotX
             StringBuilder encryption = new StringBuilder(); //plaintexti i enkriptuar
             char[] plaintextArray = plaintext.ToCharArray(); //ne kete vektor i kemi ru te gjitha karakteret e plaintextit
             char keyedLetter = ' '; //ruhet shkronja pas shiftimit
+
+            plaintext.ToUpper();
 
             for (int i = 0; i < plaintextArray.Length; i++) // iterojme pergjate vektorit
             {
