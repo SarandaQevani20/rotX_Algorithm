@@ -123,7 +123,7 @@ namespace Algoritmi_rotX
                 {
                     letter = (j - key) % 26;
 
-                    // perserisa moduli i nje numri negativ eshte nje numer negativ
+                    // perderisa moduli i nje numri negativ eshte nje numer negativ
                     // shtimi i 26 në numrin negativ ka të njëjtin rezultat si te fitohej numer pozitiv
                     if (letter < 0)
                     {

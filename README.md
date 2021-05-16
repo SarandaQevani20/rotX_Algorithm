@@ -1,4 +1,5 @@
 # rotX_Algorithm
+
 Projekti i parë nga lënda "Siguria e të dhënave"
 
 Ky projekt përmban implementimin e algoritmit ROTX përmes gjuhës programuese C#.
@@ -7,4 +8,97 @@ ROTX ("rrotullo(shifto) për X vende", është një algoritem i thjeshtë i zëv
 Një ndër algoritmet e shpeshta ROTX është algoritmi në të cilin X=13.
 ROT13 është një rast i veçantë i kodit së Cezarit i cili u zhvillua në Romën e lashtë.
 Meqenëse ka 26 shkronja (2 × 13) në alfabetin bazë latin, ROT13 është anasjelltas i tij; domethënë, për të zhbërë ROT13, zbatohet i njëjti algoritëm, kështu që i njëjti veprim mund të përdoret për kodimin dhe dekodimin. Algoritmi nuk ofron praktikisht asnjë siguri kriptografike dhe shpesh citohet si një shembull kanonik i enkriptimit të dobët. 
-ROT13 përdoret në forume në internet si një mjet për të fshehur spoilerët, zgjidhjet e enigmave dhe materialet fyese nga shikimi i rastësishëm. ROT13 ka frymëzuar një larmi lojërash me shkronja dhe fjalë.
+
+
+# program.cs
+
+Përshkrim i shkurtër rreth programit  dhe funksionit te tij:
+
+Qëllimi i këtij programi është që të marrë një plaintext i cili përmes celësit kodohet dhe dekodohet.
+Fillimisht është deklaruar dhe incializuar vektori që përmban 26 shkronjat e alfabetit latin.Pastaj në një variabël ruhet celësi.Përdoruesi e jep mesazhin në formë të teksit dhe celësin.Jepet mundësia që ta dekriptojë ose jo tekstin.Nëse përgjgjia është po, vazhdohet me dekriptim ,në të kundërtën dekriptimi nuk ndodh.
+
+Metoda Console.Writeline():
+
+Përdoret për te shfaqur mesazhe ose te dhëna në ekran .
+
+
+Metoda Console.Readline():
+
+Kjo metodë përdoret për të lexuar rreshtin e radhes së karaktereve nga inputi.
+Ai vjen nën klasën e Console (System Namespace). 
+
+
+Metoda Convert.ToInt32():
+
+Konverton një vlerë specifike në një integer 32 bitësh.Në rastin tonë është përdorur për të bërë konvertimin e celësit nga string në integer.
+
+
+Metoda append():
+
+Kjo metodë shërben për të bashkangjitur një string në fund të objektit  aktual StringBuilder.Nëse StringBuilder nuk përmbanë ndonjeë string atëherë i shtohet stringu i cili caktohet përmes metodës append().
+Në këtë program metoda append eshte përdorur në këtë formë:
+# encryption.Append(plaintextArray[i]); 
+Kjo e bën shtimin e anëtarëve të vektorit me radhë.
+
+
+Metoda Equals():
+
+Përcakton nëse dy instanca të objektit janë të barabarta.
+
+
+Metoda Encryption:
+
+Kodimi është procesi i vendosjes së një sekuence personazhesh (shkronja, numra, pikësim dhe simbole të caktuara) në një format të specializuar për transmetim ose ruajtje efikase. Në këtë rast enkodon tekstin në pozitat alfabetike të shkronjave.Kjo merr 2 parametra ne hyrje:celësin dhe plaintextin.
+Rezultati i saj eshte teksti i enkriptuar.
+
+
+Metoda Decryption:
+
+Dekodimi është procesi i kundërt - shndërrimi i një formati të koduar përsëri në sekuencën origjinale të karaktereve.Ne kete rast dekodon vargun nga shifrat në shkronjat përkatëse.Metoda e kthen pergjigjien e dekriptuar e cila thirret ne main.
+
+# form1.cs
+
+Kjo paraqet pjesen e dytë të projektit.Faktikisht pjesa e form është pjesa e desktop app e cila ke qenë e kërkuar te krijohet në kuadër te projeki.
+
+
+◦Përshkrim rreth përmbajtjes dhe funksionit:
+
+Kjo pjese e e programit paraqet ekzekutimin e kodit ne desktop.
+
+# public partial class Form1 : Form
+
+Duke përdorur klasën e pjesshme mundësohet që të definohet e njëjta klasë në dy source fajlla të ndryshëm që i përkasin së njëjtës namespace.Këto konsiderohen si të njëjta gjatë kompajlimit.Form1 është emri i Formës dhe ":" përdoret për të trashëguar vetitë e klasës bazë. Këtu Form përfaqëson System.Windows.Forms.Form. Trashëgimia përdoret për të hyrë në vetitë dhe metodat e klasës bazë.
+
+Brenda Form1 gjenden:
+1.textBox1_TextChanged()
+2.textBox2_TextChanged()
+3.textBox3_TextChanged()
+4.textBox4_TextChanged()
+
+◦ button1_Click(object sender, EventArgs e)
+  Funksionon në këtë mënyrë:
+      ◦ Celësi  konvertohet në integer
+      ◦ Plaintexti në textbox-in e parë 
+      ◦ Përmes celësit bëhet enkriptimi i plaintext-it
+
+◦ button2_Click(object sender, EventArgs e)
+  Funksionon në këtë mënyrë :
+      ◦ Celësi  konvertohet në integer
+      ◦ Ciphertext-i në textboxin e dytë
+      ◦ Përmes celësit bëhet dekriptimi i ciphertext-it
+
+◦ button3_Click(object sender, EventArgs e)
+  Ne momentin që klikohet ne kete buton:
+      ◦ Fshihet përmbajtja e textBox1
+      ◦ Fshihet përmbajtja e textBox2
+      ◦ Fshihet përmbajtja e textBox3
+
+◦ button4_Click(object sender, EventArgs e)
+  Pse është përdorur?
+       ◦ Kur na duhet të dalim ose të mbyllim formën e hapur atëherë duhet të përdorim metodën "this.Close ()" për të mbyllur formularin në me rastin e klikimit të butonit.
+
+
+
+
+
+
