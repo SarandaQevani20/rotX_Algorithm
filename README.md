@@ -79,25 +79,25 @@ Brenda Form1 gjenden:
 1.textBox1_TextChanged()\
 2.textBox2_TextChanged()\
 3.textBox3_TextChanged()\
-4.textBox4_TextChanged()\
+4.textBox4_TextChanged()
 
 ◦ button1_Click(object sender, EventArgs e)\
   Funksionon në këtë mënyrë:\
       ◦ Celësi  konvertohet në integer\
       ◦ Plaintexti në textbox-in e parë\
-      ◦ Përmes celësit bëhet enkriptimi i plaintext-it\
+      ◦ Përmes celësit bëhet enkriptimi i plaintext-it
 
 ◦ button2_Click(object sender, EventArgs e)\
   Funksionon në këtë mënyrë:\
       ◦ Celësi  konvertohet në integer\
       ◦ Ciphertext-i në textboxin e tretë\
-      ◦ Përmes celësit bëhet dekriptimi i ciphertext-it\
+      ◦ Përmes celësit bëhet dekriptimi i ciphertext-it
 
 ◦ button3_Click(object sender, EventArgs e)\
   Në momentin që klikohet në këtë buton:\
       ◦ Fshihet përmbajtja e textBox1\
       ◦ Fshihet përmbajtja e textBox2\
-      ◦ Fshihet përmbajtja e textBox3\
+      ◦ Fshihet përmbajtja e textBox3
 
 ◦ button4_Click(object sender, EventArgs e)\
   Pse është përdorur?\
@@ -113,7 +113,7 @@ Disa nga metodat e përdorura:
 
 Dispose()
 
-Dispose është një metodë që thirret për të ekzekutuar kodin e nevojshëm për pastrimin dhe lëshimin e memories dhe rivendosjen e burimeve të pakontrolluara, të tilla si lidhjet e bazës së të dhënave.Dispose() përmirëson performancën dhe optimizon kujtesën.\
+Dispose është një metodë që thirret për të ekzekutuar kodin e nevojshëm për pastrimin dhe lëshimin e memories dhe rivendosjen e burimeve të pakontrolluara, të tilla si lidhjet e bazës së të dhënave.Dispose() përmirëson performancën dhe optimizon kujtesën.
 
 SuspendLayout()
 
