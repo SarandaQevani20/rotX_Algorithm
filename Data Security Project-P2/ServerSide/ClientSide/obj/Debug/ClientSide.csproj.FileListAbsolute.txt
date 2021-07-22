@@ -1,0 +1,13 @@
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\bin\Debug\ClientSide.exe.config
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\bin\Debug\ClientSide.exe
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\bin\Debug\ClientSide.pdb
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.csproj.AssemblyReference.cache
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.Properties.Resources.resources
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.csproj.GenerateResource.cache
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.csproj.CoreCompileInputs.cache
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.exe
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.pdb
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.csproj.CopyComplete
+C:\Users\freec\Desktop\Data Security Project\ServerSide\ClientSide\obj\Debug\ClientSide.Form1.resources

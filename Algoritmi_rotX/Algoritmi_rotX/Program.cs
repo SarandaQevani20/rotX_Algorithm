@@ -22,12 +22,17 @@ namespace rotX
             Console.WriteLine("Sheno plaintextin:");
             plaintext = Console.ReadLine().ToLower();
             Console.WriteLine();
-
-            //I kerkojme perdoruesit me shenu celesin
-            Console.WriteLine("Sheno celsin:");
-            key = Convert.ToInt32(Console.ReadLine()); // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
-            Console.WriteLine();
-
+            try
+            {
+                //I kerkojme perdoruesit me shenu celesin
+                Console.WriteLine("Sheno celsin:");
+                key = Convert.ToInt32(Console.ReadLine()); // celesi qe ne fillim eshte string e kthejme ne vlere ekuivalente ne integer
+                Console.WriteLine();
+            }
+            catch (FormatException error)
+            {
+                Console.WriteLine(error.Message);
+            }
             StringBuilder encrypted = new StringBuilder(); // plaintexti i enkriptuar
             StringBuilder decrypted = new StringBuilder(); // ciphertexti i dekriptuar
 
@@ -40,7 +45,7 @@ namespace rotX
                 Console.WriteLine("Teksti i enkriptuar eshte: " + encrypted);
                 
                 Console.WriteLine();
-<<<<<<< HEAD
+
                 Console.Write("A deshironi ta dekriptoni tekstin? Shtyp po ose jo! ");
                 pergjigjja = Console.ReadLine().ToLower();
                 Console.WriteLine();
@@ -56,24 +61,11 @@ namespace rotX
 
                 Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
                 break;
-=======
 
-                Console.Write("Deshironi ta dekriptoni ciphertextin:Shtyp po ose jo ");
-                pergjigjja = Console.ReadLine().ToLower();
 
                 
-                if (pergjigjja.Equals("po"))
-                {
-                    decrypted = Decrypt(key, encrypted.ToString());
-                }
-                else
-                {
-                    break;
-                }
-                Console.WriteLine("Teksti i dekriptuar eshte: " + decrypted);
-                // Console.Write(decrypted);
+            
 
->>>>>>> 0d5a5e96039eda7c39777fb122aadf99bcda6926
             }
 
         }
@@ -87,9 +79,7 @@ namespace rotX
             StringBuilder encryption = new StringBuilder(); //plaintexti i enkriptuar
             char[] plaintextArray = plaintext.ToCharArray(); //ne kete vektor i kemi ru te gjitha karakteret e plaintextit
             char keyedLetter = ' ';   //ruhet shkronja pas shiftimit
-
-            plaintext.ToUpper();
-
+           
             for (int i = 0; i < plaintextArray.Length; i++) // iterojme pergjate vektorit
             {
 
@@ -100,6 +90,8 @@ namespace rotX
                     encryption.Append(plaintextArray[i]);
                     continue;
                 }
+                
+
 
                 for (int j = 0; j < alfabeti.Length; j++)
                 {
