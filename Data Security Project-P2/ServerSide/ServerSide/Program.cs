@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
 using System.Net.Sockets;
 using System.Xml;
@@ -70,3 +71,93 @@ namespace ServerSide
             LinkedList<Double> Euro = new LinkedList<Double>();
             LinkedList<string> Password = new LinkedList<string>();
             LinkedList<string> Super = new LinkedList<string>();
+
+
+            XmlTextReader xtr = new XmlTextReader("C:\\Users\\freec\\Desktop\\Data Security Project\\Data.xml");
+
+
+            while (xtr.Read())
+            {
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "Name")
+                {
+                    string s1 = xtr.ReadElementContentAsString();
+                    Name.AddLast(s1);
+                }
+
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "Password")
+                {
+                    string s2 = xtr.ReadElementContentAsString();
+                    string p = Class1.hashPassword(s2);
+                    Password.AddLast(p);
+
+                }
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "Type_Of_Invoice")
+                {
+                    string s3 = xtr.ReadElementContentAsString();
+                    Invoice.AddLast(s3);
+
+                }
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "year")
+                {
+                    string s4 = xtr.ReadElementContentAsString();
+
+                    year.AddLast(Int32.Parse(s4));
+
+                }
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "month")
+                {
+                    string s5 = xtr.ReadElementContentAsString();
+                    Month.AddLast(s5);
+
+                }
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "euros")
+                {
+                    string s6 = xtr.ReadElementContentAsString();
+                    Euro.AddLast(Double.Parse(s6));
+
+                }
+                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "details")
+                {
+                    string s7 = xtr.ReadElementContentAsString();
+                    Super.AddLast(s7);
+                    
+
+                }
+
+
+            }
+
+
+            xtr.Close();
+
+
+
+
+
+
+            TcpListener server = new TcpListener(8888);
+
+            server.Start();
+
+
+            Console.WriteLine("Server Started and waiting");
+            Socket socketForClients = server.AcceptSocket();
+            NetworkStream ns = new NetworkStream(socketForClients);
+            if (socketForClients.Connected)
+            {
+
+                StreamWriter sw = new StreamWriter(ns);
+
+                Console.WriteLine("Server>> Welcome Client. ");
+                sw.WriteLine("Welcome User");
+                sw.Flush();
+
+
+                StreamReader sr = new StreamReader(ns);
+                string x = sr.ReadLine();
+                StreamReader s1 = new StreamReader(ns);
+                StreamReader s2 = new StreamReader(ns);
+                StreamReader s3 = new StreamReader(ns);
+                StreamReader s4 = new StreamReader(ns);
+                StreamReader s5 = new StreamReader(ns);
+                StreamReader s6 = new StreamReader(ns);
