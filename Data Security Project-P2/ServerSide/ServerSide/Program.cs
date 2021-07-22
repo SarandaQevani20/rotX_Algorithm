@@ -200,7 +200,6 @@ namespace ServerSide
                     //------------------------------------------------------------
 
 
-
                     if (Password.Contains(safepass) || Name.Contains(DecryptedUser))
                     {
                         Console.WriteLine("Sign a Digital Doc ");
@@ -221,3 +220,35 @@ namespace ServerSide
                         Signwrite.Close();
 
                     }
+                    else
+                    {
+                        Console.WriteLine("Error logging you in.........");
+                        StreamWriter signciher = new StreamWriter(ns);
+                        StreamWriter Signwrite = new StreamWriter(ns);
+
+
+                        signciher.WriteLine("0");
+                        signciher.Flush();
+                        Signwrite.WriteLine("0");
+                        Signwrite.Flush();
+                        signciher.Close();
+                        Signwrite.Close();
+
+                    }
+
+
+
+                   
+
+                }
+                sw.Close();
+
+                ns.Close();
+            }
+            socketForClients.Close();
+
+
+
+        }
+    }
+}
